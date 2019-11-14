@@ -27,3 +27,4 @@ gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'
   - All starts with a `describe` plus `it` (or `example`) commands
 - To run tests, just type `rspec <specfile>.rb`
 - It is not a actual test script without an assertion: using `expect` [[More info about Expectations]](https://www.rubydoc.info/gems/rspec-expectations/RSpec/Expectations)
+- Creating class file to play around doing tests with an objects

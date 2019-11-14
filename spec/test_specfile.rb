@@ -1,4 +1,3 @@
-require 'selenium-webdriver'
 require './animal.rb'
 
 describe 'first test case' do

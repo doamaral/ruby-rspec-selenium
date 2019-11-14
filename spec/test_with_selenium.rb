@@ -5,4 +5,8 @@ describe 'opening website' do
         driver = Selenium::WebDriver.for :firefox
         driver.get "https://www.google.com/"
     end
+
+    example 'interacting with browser elements' do
+        
+    end
 end

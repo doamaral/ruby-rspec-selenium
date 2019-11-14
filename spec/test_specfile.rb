@@ -1,4 +1,5 @@
 require 'selenium-webdriver'
+require './animal.rb'
 
 describe 'first test case' do
     example 'testing sum of two numbers' do
@@ -23,5 +24,16 @@ describe 'first test case' do
 
         #Assert
         expect(text).to include (nail)
+    end
+
+    example 'barking dog' do
+        #Arrange
+        my_dog = Animal.new
+
+        #Act
+        #Nothing to Act on
+
+        #Assert
+        expect(my_dog.bark).to be(true)
     end
 end

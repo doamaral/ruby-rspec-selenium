@@ -29,8 +29,10 @@ gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'
 - Creating class file to play around doing tests with an objects
 
 ## Using Selenium WebDriver
-
+- First of all, you must Download [Firefox](https://github.com/mozilla/geckodriver/releases/tag/v0.26.0), [Chrome](https://chromedriver.chromium.org/downloads) Driver compatible with your Browser
+- Put its path into the Path environment variable
 - create file `test_with_selenium.rb`
 - require 'selenium-webdriver'
 - Start to use [Selenium API](https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings)
-  - driver.get "<URL>" open and load a Web Page
+  - Start with `driver = Selenium::WebDriver.for :firefox or :chrome`
+  - `driver.get "<URL>"` open and load a Web Page

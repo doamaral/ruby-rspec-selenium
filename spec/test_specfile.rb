@@ -12,4 +12,16 @@ describe 'first test case' do
         #Assert
         expect(result).to eq(15)
     end
+
+    example 'has text in string' do
+        #Arrange
+        text = "Lorem Ipsum Dolor"
+        nail = "Lorem"
+
+        #Act
+        #Nothing to Act on
+
+        #Assert
+        expect(text).to include (nail)
+    end
 end

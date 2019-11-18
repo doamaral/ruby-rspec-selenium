@@ -32,7 +32,26 @@ gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'
 - First of all, you must Download [Firefox](https://github.com/mozilla/geckodriver/releases/tag/v0.26.0), [Chrome](https://chromedriver.chromium.org/downloads) Driver compatible with your Browser
 - Put its path into the Path environment variable
 - create file `test_with_selenium.rb`
-- require 'selenium-webdriver'
+- add require 'selenium-webdriver'
 - Start to use [Selenium API](https://github.com/SeleniumHQ/selenium/wiki/Ruby-Bindings)
   - Start with `driver = Selenium::WebDriver.for :firefox or :chrome`
   - `driver.get "<URL>"` open and load a Web Page
+    - You can use `driver.navigate.to "<URL>"`, to navigate to a webpage also
+- Exercise element locators with: find_element (HOW, WHAT)
+  - [HOW](https://selenium.dev/selenium/docs/api/rb/Selenium/WebDriver/SearchContext.html#FINDERS-constant): Strategy used to locate elements
+    - :id
+    - :name
+    - :class
+    - :tag_name
+    - :css
+  - WHAT: text to find element
+- RSpec Hooks:
+  - before, after:
+    - :each
+    - :all
+
+## What is next?
+
+- Implement POM
+- Explore more types of Elements: Combo box, Radiobutton, check box and Ajax calls
+- Waits: Implicit and Explicit

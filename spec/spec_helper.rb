@@ -10,22 +10,22 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   config.before(:all) do
-        #options = Selenium::WebDriver::Firefox::Options.new(args: ['-headless'])
         options = Selenium::WebDriver::Firefox::Options.new()
+        #args: [
+        # -headless,
+        # -start-maximized,
+        #]
+
         @driver = Selenium::WebDriver.for :firefox, options: options
-        puts "Runs before all test"
-    end
-    
-    config.before(:each) do
-        puts "Runs before each test" 
+
+        target_size = Selenium::WebDriver::Dimension.new(800, 600)
+        @driver.manage.window.size = target_size
+        @driver.manage.timeouts.implicit_wait = 5
+        @driver.manage.timeouts.page_load = 15
     end
 
     config.after(:all) do
-        puts "\nRuns after all tests"
         @driver.quit
-    end
-    
-    config.after(:each) do
     end
 
 end

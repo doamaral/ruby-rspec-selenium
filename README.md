@@ -54,6 +54,11 @@ gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'
 
 - One can find interesting moving standard configurations, including stardard Hooks to `spec_helper.rb` file
   - Do it within `RSpec.configure do |config|` session
+- Using tags to filter examples: `it 'example name', :tag do ...` or `it 'example name', :tag => 'tag value' do ...`
+- Running options
+  - Test Progress style: `rspec spec/test_*.rb --format documentation`
+  - Running filtering by tags: `rspec spec/test_*.rb --tag tag` or `rspec spec/test_*.rb --tag tag:'tag value'`
+  - Running filtering by example name: `rspec spec/test_*.rb --example 'example name'` or `rspec spec/test_*.rb -e 'example name'`
 
 ## What is next
 

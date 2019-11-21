@@ -1,12 +1,12 @@
 require 'selenium-webdriver'
 
 describe 'opening website' do
-    example 'opening google' do
+    example 'opening google', :web do
         @driver.get "https://www.google.com/"
         expect(true).to be true
     end
 
-    example 'interacting with browser elements :id, :tag_name, send_keys' do
+    example 'interacting with browser elements :id, :tag_name, send_keys', :web do
         @driver.navigate.to "http://the-internet.herokuapp.com/login"
         @driver.find_element(:id, "username").send_keys "tomsmith"
         @driver.find_element(:id, "password").send_keys "SuperSecretPassword!"
@@ -19,7 +19,7 @@ describe 'opening website' do
         expect(elementText).to include ("You logged into a secure area!")
     end
 
-    example 'interacting with browser elements :class' do
+    example 'interacting with browser elements :class', :web => 'sim' do
         @driver.navigate.to "http://the-internet.herokuapp.com/login"
         @driver.find_element(:id, "username").send_keys "tomsmith_error"
         @driver.find_element(:id, "password").send_keys "SuperSecretPassword!"

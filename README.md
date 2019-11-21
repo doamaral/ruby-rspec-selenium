@@ -64,4 +64,3 @@ gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'
 
 - Implement POM
 - Explore more types of Elements: Combo box, Radiobutton, check box and Ajax calls
-- Waits: Implicit and Explicit

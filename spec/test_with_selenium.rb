@@ -1,10 +1,9 @@
 require 'selenium-webdriver'
 
 describe 'opening website' do
-    
-    #ignoring/skipping a test
     example 'opening google' do
         @driver.get "https://www.google.com/"
+        expect(true).to be true
     end
 
     example 'interacting with browser elements :id, :tag_name, send_keys' do
@@ -26,7 +25,6 @@ describe 'opening website' do
         @driver.find_element(:id, "password").send_keys "SuperSecretPassword!"
         @driver.find_element(:tag_name, "button").click
         #:class, :class_name, :id, :name, :link_text ...
-
         #class="flash error"
         element = @driver.find_element(:class, "error")
         elementText = element.text

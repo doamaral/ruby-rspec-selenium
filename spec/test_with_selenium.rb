@@ -3,11 +3,13 @@ require 'selenium-webdriver'
 describe 'opening website' do
 
     before(:all) do
-        puts "Runs before any test"
+        options = Selenium::WebDriver::Firefox::Options.new(args: ['-headless'])
+        @driver = Selenium::WebDriver.for(:firefox, options: options)
+        puts "Runs before all test"
     end
-
+    
     before(:each) do
-        @driver = Selenium::WebDriver.for :firefox
+        puts "Runs before each test" 
     end
     
     #ignoring/skipping a test
@@ -44,10 +46,10 @@ describe 'opening website' do
 
     after(:all) do
         puts "\nRuns after all tests"
+        @driver.quit
     end
     
     after(:each) do
-        @driver.quit
     end
 
 end

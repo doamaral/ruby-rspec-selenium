@@ -8,5 +8,23 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
+  
+  config.before(:all) do
+        options = Selenium::WebDriver::Firefox::Options.new(args: ['-headless'])
+        @driver = Selenium::WebDriver.for(:firefox, options: options)
+        puts "Runs before all test"
+    end
+    
+    config.before(:each) do
+        puts "Runs before each test" 
+    end
+
+    config.after(:all) do
+        puts "\nRuns after all tests"
+        @driver.quit
+    end
+    
+    config.after(:each) do
+    end
 
 end

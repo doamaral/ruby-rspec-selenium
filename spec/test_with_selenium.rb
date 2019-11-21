@@ -1,16 +1,6 @@
 require 'selenium-webdriver'
 
 describe 'opening website' do
-
-    before(:all) do
-        options = Selenium::WebDriver::Firefox::Options.new(args: ['-headless'])
-        @driver = Selenium::WebDriver.for(:firefox, options: options)
-        puts "Runs before all test"
-    end
-    
-    before(:each) do
-        puts "Runs before each test" 
-    end
     
     #ignoring/skipping a test
     example 'opening google' do
@@ -43,13 +33,4 @@ describe 'opening website' do
 
         expect(elementText).to include ("Your username is invalid!")
     end
-
-    after(:all) do
-        puts "\nRuns after all tests"
-        @driver.quit
-    end
-    
-    after(:each) do
-    end
-
 end

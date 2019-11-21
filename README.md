@@ -50,7 +50,12 @@ gem 'selenium-webdriver', '~> 3.142', '>= 3.142.6'
     - :each
     - :all
 
-## What is next?
+## Optional Moves
+
+- One can find interesting moving standard configurations, including stardard Hooks to `spec_helper.rb` file
+  - Do it within `RSpec.configure do |config|` session
+
+## What is next
 
 - Implement POM
 - Explore more types of Elements: Combo box, Radiobutton, check box and Ajax calls
